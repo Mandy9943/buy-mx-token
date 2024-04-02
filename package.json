@@ -1,0 +1,24 @@
+{
+  "name": "buy_token_bot",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "devnet": "CHAIN=devnet nodemon bot.ts"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@types/express": "^4.17.21",
+    "@types/node": "^20.11.30",
+    "nodemon": "^3.1.0",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.4.3"
+  },
+  "dependencies": {
+    "bignumber.js": "^9.1.2",
+    "dotenv": "^16.4.5",
+    "xsuite": "^0.0.51"
+  }
+}
