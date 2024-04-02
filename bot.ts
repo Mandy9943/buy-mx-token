@@ -99,7 +99,7 @@ interface Pair {
 }
 
 const amountToBuy = Number(process.env.AMOUNT_TO_BUY!);
-const poolAddress = process.env.TELEGRAM_BOT!;
+const poolAddress = process.env.POOL_ADDRESS!;
 
 const tokenToSend = "WEGLD-bd4d79";
 
