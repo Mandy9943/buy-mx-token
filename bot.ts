@@ -98,9 +98,8 @@ interface Pair {
   __typename: string;
 }
 
-const amountToBuy = 0.96;
-const poolAddress =
-  "erd1qqqqqqqqqqqqqpgql8k7m0c5qegcp4lvknfawr8cchpgpksh2jps6cdnsm";
+const amountToBuy = Number(process.env.AMOUNT_TO_BUY!);
+const poolAddress = process.env.TELEGRAM_BOT!;
 
 const tokenToSend = "WEGLD-bd4d79";
 
