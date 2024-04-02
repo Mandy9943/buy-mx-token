@@ -98,7 +98,7 @@ interface Pair {
   __typename: string;
 }
 
-const amountToBuy = 0.000001;
+const amountToBuy = 0.96;
 const poolAddress =
   "erd1qqqqqqqqqqqqqpgql8k7m0c5qegcp4lvknfawr8cchpgpksh2jps6cdnsm";
 
@@ -261,7 +261,12 @@ const fetchPoolInfo = async (
     }),
   });
 
-  const data = await response.json();
+  let data;
+  try {
+    data = await response.json();
+  } catch (error) {
+    console.log(error);
+  }
   if (data?.data?.pairs) {
     const pairs = data.data.pairs as Pair[];
     let blobPair = pairs.find((p) => p.address === addressPool);
@@ -277,7 +282,9 @@ export const watchTransfersByTokenIdentifier = async (poolAddress: string) => {
   const isActive = poolInfo?.state === "Active";
   if (poolInfo) {
     console.log(
-      `Pool info founded <${poolInfo.firstToken.ticker} | ${poolInfo.secondToken.ticker}>`
+      `Pool info founded <${poolInfo.firstToken.ticker} | ${
+        poolInfo.secondToken.ticker
+      }> - ${new Date().toLocaleString()}`
     );
 
     if (isActive) {
