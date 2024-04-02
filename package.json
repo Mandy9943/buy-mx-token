@@ -4,7 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "devnet": "CHAIN=devnet nodemon bot.ts"
+    "devnet": "CHAIN=devnet nodemon bot.ts",
+    "mainnet": "CHAIN=mainnet nodemon bot.ts"
   },
   "keywords": [],
   "author": "",
@@ -12,6 +13,7 @@
   "devDependencies": {
     "@types/express": "^4.17.21",
     "@types/node": "^20.11.30",
+    "@types/node-telegram-bot-api": "^0.64.6",
     "nodemon": "^3.1.0",
     "ts-node": "^10.9.2",
     "typescript": "^5.4.3"
@@ -19,6 +21,7 @@
   "dependencies": {
     "bignumber.js": "^9.1.2",
     "dotenv": "^16.4.5",
+    "node-telegram-bot-api": "^0.65.1",
     "xsuite": "^0.0.51"
   }
 }
